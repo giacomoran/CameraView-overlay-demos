@@ -22,9 +22,7 @@
             android:paddingTop="8dp"
             android:paddingBottom="8dp"
             android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:scaleY="1.2"
-            android:scaleX="1.2"/>
+            android:paddingEnd="12dp" />
 
         <ImageView
             android:id="@+id/image_color_red"
@@ -34,7 +32,7 @@
             android:paddingTop="8dp"
             android:paddingBottom="8dp"
             android:paddingStart="12dp"
-            android:paddingEnd="12dp" />
+            android:paddingEnd="12dp"/>
 
         <ImageView
             android:id="@+id/image_color_yellow"

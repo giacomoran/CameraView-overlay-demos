@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.Window;
 import android.widget.ImageView;
@@ -85,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         forwardTouchesView.setForwardTo(drawView);
-        currentColor = black;
+        colorRed();
     }
 
     @OnClick(R.id.camera)
@@ -117,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
         if (camera.isTakingPicture() || camera.isTakingVideo()) return;
         switch (camera.toggleFacing()) {
             case BACK:
-                fabFront.setImageResource(R.drawable.ic_camera_front_white_24dp);
+                fabFront.setImageResource(R.drawable.ic_camera_front_black_24dp);
                 break;
 
             case FRONT:
@@ -141,8 +139,10 @@ public class MainActivity extends AppCompatActivity {
         colorView.setScaleX(SELECTED_COLOR_SCALE);
         colorView.setScaleY(SELECTED_COLOR_SCALE);
 
-        currentColor.setScaleX(1.0f);
-        currentColor.setScaleY(1.0f);
+        if (currentColor != null) {
+            currentColor.setScaleX(1.0f);
+            currentColor.setScaleY(1.0f);
+        }
 
         currentColor = colorView;
     }
