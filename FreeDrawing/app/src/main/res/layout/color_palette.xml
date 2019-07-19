@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp">
+
+    <LinearLayout
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        >
+
+        <ImageView
+            android:id="@+id/image_color_black"
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:src="@drawable/circle_black"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:scaleY="1.2"
+            android:scaleX="1.2"/>
+
+        <ImageView
+            android:id="@+id/image_color_red"
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:src="@drawable/circle_red"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+
+        <ImageView
+            android:id="@+id/image_color_yellow"
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:src="@drawable/circle_yellow"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+
+        <ImageView
+            android:id="@+id/image_color_green"
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:src="@drawable/circle_green"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+
+        <ImageView
+            android:id="@+id/image_color_blue"
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:src="@drawable/circle_blue"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+
+        <ImageView
+            android:id="@+id/image_color_pink"
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:src="@drawable/circle_pink"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+
+        <ImageView
+            android:id="@+id/image_color_brown"
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:src="@drawable/circle_brown"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+
+        <ImageView
+            android:id="@+id/image_clear"
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_close_black_24dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
