@@ -56,6 +56,18 @@
             android:layout_height="wrap_content"
             app:fabSize="mini"
             android:src="@drawable/ic_color_lens_white_24dp"
+            app:layout_constraintBottom_toTopOf="@id/fab_clear"
+            app:layout_constraintEnd_toEndOf="@id/fab_clear"
+            app:layout_constraintStart_toStartOf="@id/fab_clear"
+            android:layout_marginBottom="16dp"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="mini"
+            android:src="@drawable/ic_close_white_24dp"
             app:layout_constraintBottom_toTopOf="@id/fab_video"
             app:layout_constraintEnd_toEndOf="@id/fab_video"
             app:layout_constraintStart_toStartOf="@id/fab_video"

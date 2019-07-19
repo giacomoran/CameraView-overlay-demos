@@ -103,4 +103,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @OnClick(R.id.fab_clear)
+    void clearCanvas() {
+        drawView.clearCanvas();
+    }
+
 }
