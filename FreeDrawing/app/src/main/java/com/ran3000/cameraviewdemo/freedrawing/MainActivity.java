@@ -84,6 +84,8 @@ public class MainActivity extends AppCompatActivity {
 
         forwardTouchesView.setForwardTo(drawView);
         colorRed();
+        
+        PermissionUtils.requestReadWriteAppPermissions(this);
     }
 
     @OnClick(R.id.fab_video)
