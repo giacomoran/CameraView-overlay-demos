@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
 import android.content.Intent;
+import android.media.MediaScannerConnection;
 import android.os.Bundle;
+import android.os.Environment;
+import android.util.Log;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -18,6 +21,9 @@ import com.otaliastudios.cameraview.PictureResult;
 import com.otaliastudios.cameraview.VideoResult;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -79,6 +85,14 @@ public class MainActivity extends AppCompatActivity {
                 VideoPreviewActivity.setVideoResult(result);
                 Intent intent = new Intent(MainActivity.this, VideoPreviewActivity.class);
                 startActivity(intent);
+
+                // refresh gallery
+                MediaScannerConnection.scanFile(MainActivity.this,
+                        new String[]{result.getFile().toString()}, null,
+                        (filePath, uri) -> {
+                            Log.i("ExternalStorage", "Scanned " + filePath + ":");
+                            Log.i("ExternalStorage", "-> uri=" + uri);
+                        });
             }
         });
 
@@ -95,7 +109,14 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         Toast.makeText(this, "Recording snapshot for 5 seconds...", Toast.LENGTH_SHORT).show();
-        camera.takeVideoSnapshot(new File(getFilesDir(), "video.mp4"), 5000);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_HH_mm_ss", Locale.US);
+        String currentTimeStamp = dateFormat.format(new Date());
+
+        String path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + File.separator + "CameraViewFreeDrawing";
+        File outputDir= new File(path);
+        outputDir.mkdirs();
+        File saveTo = new File(path + File.separator + currentTimeStamp + ".mp4");
+        camera.takeVideoSnapshot(saveTo, 5000);
     }
 
     @OnClick(R.id.fab_picture)

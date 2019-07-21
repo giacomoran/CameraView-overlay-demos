@@ -85,6 +85,10 @@ public class PicturePreviewActivity extends Activity {
     @OnClick(R.id.fab_save_picture)
     void savePicture() {
 
+        if (image == null) {
+            return;
+        }
+
         PermissionUtils.requestReadWriteAppPermissions(this);
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_HH_mm_ss", Locale.US);
