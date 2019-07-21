@@ -86,11 +86,6 @@ public class MainActivity extends AppCompatActivity {
         colorRed();
     }
 
-    @OnClick(R.id.camera)
-    void tap() {
-        Toast.makeText(this, "Tap.", Toast.LENGTH_SHORT).show();
-    }
-
     @OnClick(R.id.fab_video)
     void captureVideoSnapshot() {
         if (camera.isTakingVideo()) {
@@ -119,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case FRONT:
-                fabFront.setImageResource(R.drawable.ic_camera_rear_white_24dp);
+                fabFront.setImageResource(R.drawable.ic_camera_rear_black_24dp);
                 break;
         }
     }
