@@ -5,7 +5,11 @@ Some demos built around the overlay feature (preview + picture + video record) o
 You can paint on the camera with your fingers, you can record a video as you are drawing and snap a picture of the masterpiece!
 Relies heavily on [Android Draw](https://github.com/divyanshub024/AndroidDraw?source=post_page).
 
-// TODO add sample picture and video
+<p>
+<img src="https://raw.githubusercontent.com/RAN3000/CameraView-overlay-demos/master/media/ciao_screenshot.png" alt="screenshot" width="250" vspace="20" hspace="5">
+<img src="https://github.com/RAN3000/CameraView-overlay-demos/raw/master/media/ciao.gif" alt="video" width="250" vspace="20" hspace="5">
+<img src="https://raw.githubusercontent.com/RAN3000/CameraView-overlay-demos/master/media/ciao_pic.jpg" alt="picture" width="250"  vspace="20" hspace="5">
+</p>
 
 ### Ideas for other demos
  - something w/ Tensorflow
