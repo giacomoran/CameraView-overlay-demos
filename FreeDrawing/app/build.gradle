@@ -31,11 +31,11 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    implementation 'com.otaliastudios:cameraview:2.0.0-rc1'
-    implementation 'com.google.android.material:material:1.1.0-alpha08'
+    implementation 'com.otaliastudios:cameraview:2.2.0'
+    implementation 'com.google.android.material:material:1.1.0-alpha09'
     implementation 'com.jakewharton:butterknife:10.1.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
-    implementation 'com.github.divyanshub024:AndroidDraw:v0.1'
+    implementation 'com.github.RAN3000:AndroidDraw:979bcbb'
 
     implementation 'com.google.android.gms:play-services-base:17.0.0'
 }

@@ -1,9 +1,5 @@
 package com.ran3000.cameraviewdemo.freedrawing;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.res.ResourcesCompat;
-
 import android.content.Intent;
 import android.media.MediaScannerConnection;
 import android.os.Bundle;
@@ -12,6 +8,10 @@ import android.util.Log;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 import com.divyanshu.draw.widget.DrawView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         camera.setLifecycleOwner(this);
 
+        camera.setVideoMaxDuration(120 * 1000); // max 2mins
         camera.addCameraListener(new CameraListener() {
             @Override
             public void onPictureTaken(@NonNull PictureResult result) {
@@ -105,10 +106,10 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.fab_video)
     void captureVideoSnapshot() {
         if (camera.isTakingVideo()) {
-            Toast.makeText(this, "Already taking video.", Toast.LENGTH_SHORT).show();
+            camera.stopVideo();
+            fabVideo.setImageResource(R.drawable.ic_videocam_black_24dp);
             return;
         }
-        Toast.makeText(this, "Recording snapshot for 5 seconds...", Toast.LENGTH_SHORT).show();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_HH_mm_ss", Locale.US);
         String currentTimeStamp = dateFormat.format(new Date());
 
@@ -116,7 +117,9 @@ public class MainActivity extends AppCompatActivity {
         File outputDir= new File(path);
         outputDir.mkdirs();
         File saveTo = new File(path + File.separator + currentTimeStamp + ".mp4");
-        camera.takeVideoSnapshot(saveTo, 5000);
+        camera.takeVideoSnapshot(saveTo);
+
+        fabVideo.setImageResource(R.drawable.ic_stop_black_24dp);
     }
 
     @OnClick(R.id.fab_picture)

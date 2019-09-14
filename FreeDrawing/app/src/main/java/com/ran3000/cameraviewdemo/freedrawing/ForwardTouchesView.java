@@ -2,11 +2,9 @@ package com.ran3000.cameraviewdemo.freedrawing;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 public class ForwardTouchesView extends View {
@@ -33,7 +31,6 @@ public class ForwardTouchesView extends View {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if (forwardTo != null) {
-            Log.d("ciao", "onTouchEvent: prova");
             return forwardTo.onTouchEvent(event);
         }
         return super.onTouchEvent(event);

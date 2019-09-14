@@ -4,19 +4,17 @@ import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.MediaScannerConnection;
-import android.net.Uri;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
-
 import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.otaliastudios.cameraview.BitmapCallback;
-import com.otaliastudios.cameraview.FileCallback;
 import com.otaliastudios.cameraview.PictureResult;
 import com.otaliastudios.cameraview.size.AspectRatio;
 

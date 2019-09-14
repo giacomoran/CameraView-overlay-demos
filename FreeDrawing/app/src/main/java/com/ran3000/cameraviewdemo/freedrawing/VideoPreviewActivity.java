@@ -4,13 +4,13 @@ import android.app.Activity;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
-
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.MediaController;
 import android.widget.VideoView;
+
+import androidx.annotation.Nullable;
 
 import com.otaliastudios.cameraview.VideoResult;
 
