@@ -25,17 +25,22 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+    // CameraView
     implementation 'com.otaliastudios:cameraview:2.2.0'
-    implementation 'com.google.android.material:material:1.1.0-alpha09'
-    implementation 'com.jakewharton:butterknife:10.1.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
-    implementation 'com.github.RAN3000:AndroidDraw:979bcbb'
 
-    implementation 'com.google.android.gms:play-services-base:17.0.0'
+    // Butter Knife
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+
+    // Material (for FloatingActionButton)
+    implementation 'com.google.android.material:material:1.0.0'
+
+    // Android Draw
+    implementation 'com.github.RAN3000:AndroidDraw:da6512c'
 }

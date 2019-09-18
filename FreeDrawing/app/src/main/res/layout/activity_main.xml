@@ -16,11 +16,11 @@
 
         <com.divyanshu.draw.widget.DrawView
             android:id="@+id/draw_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             app:layout_drawOnPreview="true"
             app:layout_drawOnPictureSnapshot="true"
             app:layout_drawOnVideoSnapshot="true"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             />
 
     </com.otaliastudios.cameraview.CameraView>
