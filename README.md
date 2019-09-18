@@ -4,6 +4,7 @@ Some demos built around the overlay feature (preview + picture + video record) o
 ### FreeDrawing ([link](https://github.com/RAN3000/CameraView-overlay-demos/tree/master/FreeDrawing))
 You can paint on the camera with your fingers, you can record a video as you are drawing and snap a picture of the masterpiece!
 Relies heavily on [Android Draw](https://github.com/divyanshub024/AndroidDraw?source=post_page).
+
 I wrote a blog post explaining what's going on in more details, you can find the it [here](https://ran3000.github.io/2019/09/14/cameraview-interactivity.html).
 
 <p>
